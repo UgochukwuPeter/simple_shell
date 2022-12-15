@@ -1,0 +1,41 @@
+.TH Simple_Shell 1 "15 April 2019" "1.0" "Simple Shell man page"
+.SH NAME
+Simple Shell \- A simple version of shell
+.SH SYNOPSIS
+$ [command] [arguments]
+.SH DESCRIPTION
+A simple version of shell, it will execute any files found in the path, and has
+some built ins working. CTL c, CTL d, and exit will all exit the shell, and exit
+or return with the value of 0.
+.br
+The following built ins work: alias, exit, cwd, echo, pwd, setenv, unsetenv.
+.SH EXAMPLE
+Interactive mode example:
+.br
+$ ls
+.br
+file_a file_b file_c
+.br
+ 
+.br
+Non-interactive mode example:
+.br
+echo "ls" |
+.B ./hsh
+.br
+ 
+.br
+Example of a built in:
+.br
+$ cd
+.br
+/home/vagrant$
+file_a file_b file_c
+.SH OPTIONS
+This version of simple shell does not take any options.
+.SH BUGS
+Slight memory leak form getline.
+.SH AUTHORS
+Bill Huang
+.br
+John Cook
